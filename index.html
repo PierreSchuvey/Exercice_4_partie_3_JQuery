@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <div id="rectangle"></div>
+    <button type="button" name="button" id="dimensions">Dimensions !</button>
+    <button type="button" name="button" id="green">Vert !</button>
+    <button type="button" name="button" id="resetColor">Reset la couleur !</button>
+    <button type="button" name="button" id="hide">Cacher !</button>
+    <button type="button" name="button" id="show">Voir !</button>
+  </form>
+  <script>
+  var hauteur = 10;
+  $('#rectangle').css('border','solid 2px black');
+  $('#rectangle').css('width','100px');
+  $('#rectangle').css('height',hauteur+'px');
+  $('#dimensions').click(function(){
+    if(hauteur <= 100){
+    hauteur = hauteur + 10;
+    $('#rectangle').css('height',hauteur+'px');
+  }
+  else{
+    hauteur = 10;
+  }
+  });
+  $('#green').click(function(){
+    $('#rectangle').css('border','solid green 2px');
+  });
+  $('#resetColor').click(function(){
+    $('#rectangle').css('border','solid black 2px');
+  });
+  $('#hide').click(function(){
+      $('#rectangle').hide();
+  });
+  $('#show').click(function(){
+      $('#rectangle').show();
+  });
+  </script>
+</body>
+</html>
